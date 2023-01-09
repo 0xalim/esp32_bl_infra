@@ -4,7 +4,6 @@
 BluetoothSerial SerialBT;
 
 static bool btScanAsync = true;
-static bool btScanSync  = false;
 
 void setup() {
   Serial.begin(115200);
@@ -12,7 +11,10 @@ void setup() {
   // Need this? Don't think so
   SerialBT.begin("com");
   Serial.println("com dev. started");
+}
 
+void loop() {
+  delay(100);
   if (btScanAsync) {
     Serial.print("Start async. mode");
     if (SerialBT.discoverAsync(btDevFound)) {
@@ -25,19 +27,6 @@ void setup() {
       Serial.println("Error for async. mode");
     }
   }
-  
-  if (btScanSync) {
-    Serial.println("Start sync. mode");
-    btRes *res = SerialBT.discover(BT_DISCOVER_TIME);
-    if (res)
-      res->dump(&Serial);
-    else
-      Serial.println("Error for sync mode");
-  }
-}
-
-void loop() {
-  delay(100);
 }
 
 void btDevFound(btDev* dev) {
