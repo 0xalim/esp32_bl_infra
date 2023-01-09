@@ -1,23 +1,44 @@
 #include <Arduino.h>
 #line 1 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
 #include <BluetoothSerial.h>
+#include <BLEDevice.h>
+#include <BLEUtils.h>
+#include <BLEScan.h>
+#include <BLEAdvertisedDevice.h>
 
 BluetoothSerial bts;
-static bool ifSync = false;
+BLEScan* bles;
+
+static bool ifSync   = false;
+static int  scanTime = 10;
 
 #define BT_DISCOVER_TIME	10000
 
-#line 8 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
+class MyAdvertisedDeviceCallbacks: public BLEAdvertisedDeviceCallbacks {
+	void onResult(BLEAdvertisedDevice advertisedDevice) {
+		Serial.printf("%s\r\n", advertisedDevice.toString().c_str());
+	}
+};
+
+#line 21 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
 void setup();
-#line 28 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
+#line 49 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
 void loop();
-#line 32 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
+#line 57 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
 void btPrint(BTAdvertisedDevice* pDevice);
-#line 8 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
+#line 21 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
 void setup() {
   Serial.begin(115200);
   bts.begin("Com");
 
+	BLEDevice::init("");
+	bles = BLEDevice::getScan();
+  bles->setAdvertisedDeviceCallbacks(new MyAdvertisedDeviceCallbacks());
+	bles->setActiveScan(true);
+	bles->setInterval(100);
+	bles->setWindow(99);
+
+	Serial.println("Bluetooth BR/EDR\r\n");
 	if (ifSync) {
 		Serial.println("Sync");
 		BTScanResults *devResults = bts.discover(BT_DISCOVER_TIME);
@@ -35,7 +56,11 @@ void setup() {
 }
 
 void loop() {
-  delay(100);
+  delay(2000);
+	BLEScanResults foundDevices = bles->start(scanTime, false);
+	Serial.print("Bluetooth Low Energy\r\n");
+	Serial.println(foundDevices.getCount());
+	bles->clearResults();
 }
 
 void btPrint(BTAdvertisedDevice* pDevice) {

@@ -137,4 +137,34 @@
  /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BTScan.h \
  /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/cores/esp32/Print.h \
  /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BTAddress.h \
- /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BTAdvertisedDevice.h
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BTAdvertisedDevice.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEDevice.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/tools/sdk/esp32/include/bt/host/bluedroid/api/include/api/esp_gap_ble_api.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/tools/sdk/esp32/include/bt/host/bluedroid/api/include/api/esp_gattc_api.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/tools/sdk/esp32/include/bt/host/bluedroid/api/include/api/esp_gatt_defs.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/tools/sdk/esp32/include/bt/include/esp32/include/esp_bt.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/tools/sdk/esp32/include/esp_system/include/esp_task.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/tools/sdk/esp32/include/freertos/include/esp_additions/freertos/FreeRTOSConfig.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEServer.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/tools/sdk/esp32/include/bt/host/bluedroid/api/include/api/esp_gatts_api.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEUUID.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/tools/sdk/esp32/include/bt/host/bluedroid/api/include/api/esp_gatt_defs.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEAdvertising.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/RTOS.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/tools/sdk/esp32/include/esp_ringbuf/include/freertos/ringbuf.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLECharacteristic.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEDescriptor.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEValue.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEService.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLESecurity.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEAddress.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEClient.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLERemoteService.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLERemoteCharacteristic.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLERemoteDescriptor.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEAdvertisedDevice.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEScan.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEUtils.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEUtils.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEScan.h \
+ /home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BLE/src/BLEAdvertisedDevice.h
