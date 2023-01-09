@@ -1,0 +1,11 @@
+{
+  "additionalFiles": "..",
+  "builtInToolsFolders": "",
+  "compiler.optimization_flags": "-Os",
+  "customBuildProperties": "",
+  "fqbn": "esp32:esp32:esp32:FlashSize=4M,EventsCore=1,FlashMode=qio,LoopCore=1,UploadSpeed=921600,JTAGAdapter=bridge,DebugLevel=none,PartitionScheme=default,PSRAM=enabled,FlashFreq=80,CPUFreq=240,EraseFlash=none",
+  "hardwareFolders": "/home/ash/.arduino15/packages",
+  "otherLibrariesFolders": "/home/ash/Arduino/libraries",
+  "runtime.ide.version": "10607",
+  "sketchLocation": "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
+}
