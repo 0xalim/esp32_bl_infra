@@ -1,25 +1,36 @@
 # 1 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
 # 2 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino" 2
 
+BluetoothSerial bts;
+static bool ifSync = false;
 
-BluetoothSerial SerialBT;
+
 
 void setup() {
   Serial.begin(115200);
-  SerialBT.begin("com");
-}
+  bts.begin("Com");
 
-void loop() {
- while (true) {
-  BTScanResults *pResults = SerialBT.discover(10000);
-
-  if (pResults)
-   pResults->dump(&Serial);
+ if (ifSync) {
+  Serial.println("Sync");
+  BTScanResults *devResults = bts.discover(10000);
+  if (devResults)
+   devResults->dump(&Serial);
   else
-   Serial.println("no results");
+   Serial.println("Nothing");
+ } else {
+  Serial.println("Async");
+  if (bts.discoverAsync(btPrint)) {
+   delay(10000);
+   bts.discoverAsyncStop();
+  }
  }
 }
 
-void btDevFound(BTAdvertisedDevice* dev) {
- Serial.printf("%s", dev->toString().c_str());
+void loop() {
+  delay(100);
+}
+
+void btPrint(BTAdvertisedDevice* pDevice) {
+ delay(5000);
+ Serial.printf("%s\r\n", pDevice->toString().c_str());
 }

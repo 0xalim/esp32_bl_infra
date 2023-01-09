@@ -993,11 +993,11 @@
    "-I/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/cores/esp32",
    "-I/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/variants/esp32",
    "-I/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src",
-   "/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BTAdvertisedDeviceSet.cpp",
+   "/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BluetoothSerial.cpp",
    "-o",
-   "/home/ash/esp32_bl_infra/build/libraries/BluetoothSerial/BTAdvertisedDeviceSet.cpp.o"
+   "/home/ash/esp32_bl_infra/build/libraries/BluetoothSerial/BluetoothSerial.cpp.o"
   ],
-  "file": "/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BTAdvertisedDeviceSet.cpp"
+  "file": "/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BluetoothSerial.cpp"
  },
  {
   "directory": "/home/ash/esp32_bl_infra",
@@ -1243,10 +1243,10 @@
    "-I/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/cores/esp32",
    "-I/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/variants/esp32",
    "-I/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src",
-   "/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BluetoothSerial.cpp",
+   "/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BTAdvertisedDeviceSet.cpp",
    "-o",
-   "/home/ash/esp32_bl_infra/build/libraries/BluetoothSerial/BluetoothSerial.cpp.o"
+   "/home/ash/esp32_bl_infra/build/libraries/BluetoothSerial/BTAdvertisedDeviceSet.cpp.o"
   ],
-  "file": "/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BluetoothSerial.cpp"
+  "file": "/home/ash/.arduino15/packages/esp32/hardware/esp32/2.0.6/libraries/BluetoothSerial/src/BTAdvertisedDeviceSet.cpp"
  }
 ]
