@@ -9,7 +9,7 @@ BluetoothSerial SerialBT;
 void setup();
 #line 11 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
 void loop();
-#line 20 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
+#line 22 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
 void btDevFound(BTAdvertisedDevice* dev);
 #line 6 "/home/ash/esp32_bl_infra/esp32_bl_infra.ino"
 void setup() {
@@ -19,10 +19,12 @@ void setup() {
 
 void loop() {
 	while (true) {
-		Serial.print("Start async. mode");
-		if (SerialBT.discoverAsync(btDevFound)) {
-			delay(999999999);
-		}
+		BTScanResults *pResults = SerialBT.discover(BT_DISCOVER_TIME);
+
+		if (pResults)
+			pResults->dump(&Serial);
+		else
+			Serial.println("no results");
 	}
 }
 

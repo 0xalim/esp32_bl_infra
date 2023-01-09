@@ -10,10 +10,12 @@ void setup() {
 
 void loop() {
 	while (true) {
-		Serial.print("Start async. mode");
-		if (SerialBT.discoverAsync(btDevFound)) {
-			delay(999999999);
-		}
+		BTScanResults *pResults = SerialBT.discover(BT_DISCOVER_TIME);
+
+		if (pResults)
+			pResults->dump(&Serial);
+		else
+			Serial.println("no results");
 	}
 }
 
